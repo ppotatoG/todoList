@@ -1,5 +1,6 @@
 $point-color: rgb(219, 235, 220);
 $sub-color: rgb(97, 167, 64);
+$red : rgb(199, 117, 117);
 
 * {
     margin: 0;
@@ -76,11 +77,25 @@ $sub-color: rgb(97, 167, 64);
             margin-right: 10px;
             display: block;
         }
+        &__inner {
+            display: flex;
+            justify-content: right;
+            align-items: center;
+            padding-top: 10px;
+        }
         &__button {
+            &[data-delete=true] {
+                width: 50px;
+                background: $red;
+                color: #fff;
+            }
             width: 80px;
             display: block;
             padding: 5px;
             background: $point-color;
+            & + button {
+               margin-left: 10px; 
+            }
         }
     }
 
@@ -107,11 +122,25 @@ $sub-color: rgb(97, 167, 64);
             margin-right: 10px;
             display: block;
         }
+        &__inner {
+            display: flex;
+            justify-content: right;
+            align-items: center;
+            padding-top: 10px;
+        }
         &__button {
             width: 80px;
             display: block;
             padding: 5px;
-            background: $point-color;;
+            background: $point-color;
+            &[data-delete=true] {
+                width: 50px;
+                background: $red;
+                color: #fff;
+            }
+            & + button {
+               margin-left: 10px; 
+            }
         }
     }
 
