@@ -3,12 +3,11 @@ var todoItems;
 // api
 function fetchTodoItems() {
     var todos = [
-        { id: 0, title: '역량평가 작성', done: false },
-        { id: 1, title: '영스타 모바일 이벤트 페이지 이전', done: true },
-        { id: 2, title: '개발3팀 주간업무 보드글 작성', done: false },
-        { id: 3, title: '1월 연차 사용 전결', done: false },
-        { id: 4, title: '변호사 신규 이벤트 페이지', done: false },
-        { id: 5, title: '중국어 메인 개편', done: true },
+        { id: 0, title: '맥모닝먹기', done: false },
+        { id: 1, title: '아침 유산소', done: true },
+        { id: 2, title: '저녁 근력운동', done: false },
+        { id: 3, title: '1일 1커밋', done: false },
+        { id: 4, title: '도시락 싸기', done: false },
     ];
     return todos;
 }
@@ -21,12 +20,12 @@ var addList = function (item) {
         className = 'wrap_box-done';
     }
     var parentEl = document.querySelector(".".concat(className));
-    // list > inner > Done button 
+    // list > inner > Done button
     var doneButton = document.createElement('button');
     doneButton.className = "".concat(className, "__button");
     doneButton.innerText = item.done ? '미완료' : '완료';
     doneButton.dataset.done = "".concat(item.done);
-    // list > inner > delBbutton 
+    // list > inner > delBbutton
     var delButton = document.createElement('button');
     delButton.className = "".concat(className, "__button");
     delButton.innerText = '삭제';

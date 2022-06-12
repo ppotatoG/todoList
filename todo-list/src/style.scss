@@ -12,11 +12,11 @@ $red : rgb(199, 117, 117);
         family: 'Noto Sans KR', sans-serif;
         weight: 300;
     }
-    button, 
+    button,
     input {
         background: none;
         border: none;
-        outline: none; 
+        outline: none;
     }
 }
 .wrap {
@@ -94,7 +94,7 @@ $red : rgb(199, 117, 117);
             padding: 5px;
             background: $point-color;
             & + button {
-               margin-left: 10px; 
+                margin-left: 10px;
             }
         }
     }
@@ -139,7 +139,7 @@ $red : rgb(199, 117, 117);
                 color: #fff;
             }
             & + button {
-               margin-left: 10px; 
+                margin-left: 10px;
             }
         }
     }
@@ -174,7 +174,7 @@ $red : rgb(199, 117, 117);
             padding: 5px;
             background: $point-color;
             & + button {
-               margin-left: 10px; 
+                margin-left: 10px;
             }
         }
     }
