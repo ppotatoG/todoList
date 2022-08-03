@@ -1,0 +1,181 @@
+$point-color: rgb(219, 235, 220);
+$sub-color: rgb(97, 167, 64);
+$red : rgb(199, 117, 117);
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    color: #1f1f1f;
+    font: {
+        family: 'Noto Sans KR', sans-serif;
+        weight: 300;
+    }
+    button,
+    input {
+        background: none;
+        border: none;
+        outline: none;
+    }
+}
+.wrap {
+    position:relative;
+    border : {
+        color: #ddd;
+        style: solid;
+        width: 1px;
+        radius: 10px;
+    }
+    max-width: 500px;
+    margin:100px auto 0;
+    overflow: hidden;
+    &_header {
+        padding:20px;
+        background: $point-color;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &__text {
+            font-weight: 700;
+        }
+        &__button {
+            display: block;
+            padding: 10px;
+            color: #fff;
+            background: $sub-color;
+            width: 80px;
+            border : {
+                style: solid;
+                width: 1px;
+                color: $sub-color;
+            }
+        }
+    }
+    &_box {
+        padding: 10px 20px;
+        &__list {
+            &-header {
+                padding:10px 0;
+                font: {
+                    size: 20px;
+                    weight: 500;
+                }
+            }
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            height: 50px;
+            box-sizing: border-box;
+        }
+        &__text {
+            width: calc(100% - 60px);
+        }
+        &__ico {
+            color: $point-color;
+            margin-right: 10px;
+            display: block;
+        }
+        &__inner {
+            display: flex;
+            justify-content: right;
+            align-items: center;
+            padding-top: 10px;
+        }
+        &__button {
+            &[data-delete=true] {
+                width: 50px;
+                background: $red;
+                color: #fff;
+            }
+            width: 80px;
+            display: block;
+            padding: 5px;
+            background: $point-color;
+            & + button {
+                margin-left: 10px;
+            }
+        }
+    }
+
+    &_box-done {
+        padding: 10px 20px;
+        &__list {
+            &-header {
+                padding:10px 0;
+                font: {
+                    size: 20px;
+                    weight: 500;
+                }
+            }
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
+        &__text {
+            width: calc(100% - 60px);
+        }
+        &__ico {
+            color: $sub-color;
+            margin-right: 10px;
+            display: block;
+        }
+        &__inner {
+            display: flex;
+            justify-content: right;
+            align-items: center;
+            padding-top: 10px;
+        }
+        &__button {
+            width: 80px;
+            display: block;
+            padding: 5px;
+            background: $point-color;
+            &[data-delete=true] {
+                width: 50px;
+                background: $red;
+                color: #fff;
+            }
+            & + button {
+                margin-left: 10px;
+            }
+        }
+    }
+
+    &_box-modal {
+        display: none;
+        position: absolute;
+        top: 81px;
+        left: 0;
+        padding: 20px;
+        background: rgba($color: $sub-color, $alpha: .6);
+        backdrop-filter: blur(2px);
+        width: 100%;
+        box-sizing: border-box;
+        &__input {
+            width: 100%;
+            display: block;
+            border-color: $sub-color;
+            background: #fff;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        &__inner {
+            display: flex;
+            justify-content: right;
+            align-items: center;
+            padding-top: 10px;
+        }
+        &__button {
+            width: 80px;
+            display: block;
+            padding: 5px;
+            background: $point-color;
+            & + button {
+                margin-left: 10px;
+            }
+        }
+    }
+}
